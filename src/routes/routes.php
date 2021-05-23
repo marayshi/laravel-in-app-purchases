@@ -4,11 +4,11 @@ use Illuminate\Support\Facades\Route;
 use Imdhemy\Purchases\Http\Controllers\ServerNotificationController;
 
 Route::post(
-    '/purchases/subscriptions/google',
+    '/api/google-webhook',
     [ServerNotificationController::class, 'google']
 )->name('purchase.serverNotifications.google');
 
 Route::post(
-    '/purchases/subscriptions/apple',
+    '/api/apple-webhook',
     [ServerNotificationController::class, 'apple']
 )->name('purchase.serverNotifications.apple');
